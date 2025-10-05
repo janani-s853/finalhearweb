@@ -1,0 +1,122 @@
+.hero3-container {
+  padding: 80px 5%;
+  background: linear-gradient(to bottom, #f2f2f2, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero3-content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  gap: 50px;
+  align-items: center;
+}
+
+.hero3-left {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.hero3-left img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  animation: float 3s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-20px); }
+}
+
+.hero3-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero3-right h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #4e4e4e;
+}
+
+.hero3-right p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #666666;
+}
+
+.hero3-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.hero3-features li {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+
+.hero3-features .chevron-icon {
+  margin-right: 10px;
+  color: #8e84c6ff;
+}
+
+.hero3-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.download-btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.download-btn.android {
+  background: #3ddc84;
+}
+
+.download-btn.android:hover {
+  background: #32c76f;
+}
+
+.download-btn.ios {
+  background: #000000;
+}
+
+.download-btn.ios:hover {
+  background: #333333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero3-content {
+    flex-direction: column-reverse;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .hero3-right h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero3-right p {
+    font-size: 1rem;
+  }
+
+  .hero3-buttons {
+    justify-content: center;
+  }
+}

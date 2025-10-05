@@ -1,0 +1,294 @@
+.team-section {
+  padding: 40px 20px;
+  padding-bottom: 10px; /* increased bottom padding */
+  background: #ffffff;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+
+  position: relative; /* needed for z-index to work */
+  z-index: 0; /* behind other interactive elements */
+}
+
+
+.team-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #1f2b50;
+  margin-bottom: 40px;
+}
+
+/* Carousel container */
+.team-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 20px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap:45px;
+
+}
+
+/* Hide scrollbar for Webkit browsers */
+.team-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each team card */
+.team-card {
+  flex: 0 0 260px; /* card width */
+  scroll-snap-align: center;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.team-image-wrapper {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.team-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-image {
+  transform: scale(1.1);
+}
+
+.team-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.team-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1f2b50;
+  margin-bottom: 5px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.team-card:hover .team-name {
+  color: #0A66C2;
+  transform: scale(1.05);
+}
+
+.team-role,
+.team-desc {
+  color: #5c5c7a;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.team-card:hover .team-role,
+.team-card:hover .team-desc {
+  color: #333;
+  transform: scale(1.02);
+}
+
+/* LinkedIn icon */
+.team-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.team-icons a {
+  transition: transform 0.3s ease;
+}
+
+.team-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .team-title {
+    font-size: 2rem;
+  }
+
+  .team-card {
+    flex: 0 0 220px;
+  }
+
+  .team-image-wrapper {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-card {
+    flex: 0 0 180px;
+  }
+
+  .team-image-wrapper {
+    height: 200px;
+  }
+
+  .team-name {
+    font-size: 1rem;
+  }
+
+  .team-role,
+  .team-desc {
+    font-size: 0.85rem;
+  }
+}
+
+
+/* ✅ Mobile: horizontal scroll */
+@media (max-width: 768px) {
+  .team-horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .team-card {
+    flex: 0 0 80%; /* card takes ~80% of screen */
+    scroll-snap-align: start;
+  }
+
+  .team-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  /* optional: hide scrollbar but keep scroll working */
+  .team-horizontal-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  .team-horizontal-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+@media (max-width: 768px) {
+  .team-horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  /* ✅ Reduce card size in mobile */
+  .team-card {
+    flex: 0 0 100%; /* instead of 80%, smaller cards */
+    max-width: 280px; /* prevents extra large stretch */
+    scroll-snap-align: start;
+  }
+
+  .team-image-wrapper {
+    height: 220px; /* smaller image height for mobile */
+  }
+
+  .team-info {
+    padding: 12px;
+  }
+
+  .team-name {
+    font-size: 1rem;
+  }
+
+  .team-role {
+    font-size: 0.85rem;
+  }
+
+  .team-desc {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .team-horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  /* ✅ Each card fills full width (1 at a time) */
+  .team-card {
+    flex: 0 0 100%;       /* full screen width */
+    max-width: 95%;      /* no stretching issues */
+    scroll-snap-align: center; /* snaps perfectly centered */
+  }
+
+  .team-image-wrapper {
+    height: 300px; /* balanced image height */
+  }
+
+  .team-info {
+    padding: 14px;
+  }
+
+  .team-name {
+    font-size: 1.1rem;
+  }
+
+  .team-role {
+    font-size: 0.9rem;
+  }
+
+  .team-desc {
+    font-size: 0.85rem;
+  }
+
+  /* optional: hide scrollbar */
+  .team-horizontal-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  .team-horizontal-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+/* Bubble container */
+.team-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+/* Increase image height for the highlighted 4th card */
+.highlight-card .team-image {
+  height: 300px; /* increase from default 200px */
+  object-fit: cover; /* keeps image proportions */
+  transition: height 0.3s ease;
+}
+
+.team-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #cbd5e1; /* gray */
+  transition: background 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.team-dot.active {
+  background: #3682ce; /* active blue */
+  transform: scale(1.2);
+}

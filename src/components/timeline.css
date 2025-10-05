@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+.timeline-section {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top left, #0f0f1a, #1c1c2b);
+  color: #fff;
+  padding: 120px 0;
+  position: relative;
+  overflow: visible;
+  min-height: 300px;
+}
+
+.timeline-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 7.5rem;
+  margin-top: -3rem;
+  background: linear-gradient(90deg, #e91e63, #f39c12, #27ae60, #3498db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: hueShift 6s linear infinite;
+}
+
+.timeline-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.timeline-svg {
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.rocket {
+  position: absolute;
+  font-size: 36px;
+  filter: drop-shadow(0 0 10px #ffcc00);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.timeline-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.timeline-item {
+  text-align: center;
+  opacity: 1;
+}
+
+.timeline-circle {
+  width: 60px;
+  height: 60px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #1e1e2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.timeline-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255,255,255,0.6);
+}
+
+.timeline-icon {
+  font-size: 22px;
+  color: inherit;
+}
+
+.timeline-text {
+  width: 150px;
+  background: rgba(255,255,255,0.08);
+  padding: 10px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 12px rgba(255,255,255,0.08);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 130%;
+}
+
+.timeline-text h3 {
+  font-size: 0.85rem;
+  margin-bottom: 3px;
+}
+
+.timeline-text p {
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+.timeline-num {
+  font-size: 0.65rem;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+@keyframes hueShift {
+  from { filter: hue-rotate(0deg); }
+  to { filter: hue-rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .timeline-section {
+    min-height: 400px; /* reduced from 100px (too small) or adjust as needed */
+    padding-bottom: 10px; /* optional for spacing at bottom */
+  }
+
+  .timeline-container {
+    position: relative;
+    width: 100%;
+    height: 550px; /* adjust based on content */
+  }
+
+  /* Make each timeline item relative */
+  .timeline-item {
+    position: relative;
+    width: 100%;
+  }
+
+  /* Style circles individually */
+  .circle-1 {
+    position: absolute;
+    top: -70px;
+    left: 70px;
+  }
+  .circle-2 {
+    position: absolute;
+    top: 70px;
+    left: 14rem;
+  }
+  .circle-3 {
+    position: absolute;
+    top: 200px;
+    left: 70px;
+  }
+  .circle-4 {
+    position: absolute;
+    top: 330px;
+    left: 230px;
+  }
+
+  /* Style text boxes individually */
+  .box-1 {
+    position: absolute;
+    top: -100px;
+    left: 15rem;
+    height: 110px;
+  }
+  .box-2 {
+    position: absolute;
+    top:35px;
+    left: 120px;
+    height: 110px;
+  }
+  .box-3 {
+    position: absolute;
+    top: 170px;
+    left: 240px;
+    height: 110px;
+  }
+  .box-4 {
+    position: absolute;
+    top: 305px;
+    left: 120px;
+    height: 110px;
+  }
+}

@@ -1,0 +1,97 @@
+/* Full screen container */
+.products-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Centered content */
+.coming-soon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Image styling */
+.coming-soon-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  animation: bounce 2s infinite;
+}
+
+/* Heading */
+.coming-soon-container h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Paragraph */
+.coming-soon-container p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: none;
+  white-space: nowrap; /* default: one line on desktop/tablet */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: -5px;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ---------------- Media Queries ---------------- */
+
+/* Tablets (width <= 1024px) */
+@media (max-width: 1024px) {
+  .coming-soon-image { max-width: 250px; }
+  .coming-soon-container h1 { font-size: 2rem; }
+  .coming-soon-container p { font-size: 1rem; }
+}
+
+/* Small tablets / large phones (width <= 768px) */
+@media (max-width: 768px) {
+  .coming-soon-image { max-width: 250px; }
+  .coming-soon-container h1 { font-size: 1.8rem; }
+  .coming-soon-container p { font-size: 0.95rem; }
+}
+
+/* Phones (width <= 480px) */
+@media (max-width: 480px) {
+  .coming-soon-image { max-width: 200px; }
+  .coming-soon-container h1 { font-size: 1.2rem; }
+  .coming-soon-container p {
+    font-size: 10px;
+    white-space: normal; /* allow wrapping on phone */
+    overflow: visible;
+    text-overflow: clip;
+    max-width: 90%; /* optional, prevent touching edges */
+  }
+
+  .coming-soon-container h1 {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Paragraph */
+.coming-soon-container p {
+  font-size: 0.rem;
+  color: #555;
+  max-width: none;
+  white-space: nowrap; /* default: one line on desktop/tablet */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: -5px;
+}
+}
