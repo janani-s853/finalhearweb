@@ -412,25 +412,54 @@
     padding: 10px;
   }
 }
-
 @media (max-width: 480px) {
+  /* Make form single-column and tighter */
+  .profile-page .form-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 
+  /* Compact input, select, and textarea fields */
+  .profile-page input,
+  .profile-page select,
+  .profile-page textarea {
+    width: 90%;
+    height: 34px;           /* reduced height */
+    font-size: 12px;        /* smaller text */
+    padding: 4px 6px;      /* tighter padding */
+    border-radius: 14px;     /* smaller corner radius */
+  }
+
+  /* Make textarea smaller */
+  .profile-page textarea {
+    min-height: 70px;
+    height: auto;
+    font-size: 12px;
+  }
+
+  /* Adjust container padding */
+  .profile-page .profile-info.card-animate {
+    padding: 18px;
+  }
+
+  /* Smaller section titles */
+  .profile-page .info-title {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+  /* Compact button */
   .profile-page .edit-btn,
   .profile-page .empty-state-btn {
     width: 100%;
-    font-size: 14px;
-    padding: 10px;
+    font-size: 13px;
+    padding: 8px;
+    border-radius: 8px;
   }
 
-  .profile-page .info-title {
-    font-size: 16px;
-  }
-
-  .profile-page .empty-state-title {
-    font-size: 18px;
-  }
-
-  .profile-page .empty-state-text {
-    font-size: 14px;
+  /* Adjust placeholder text */
+  .profile-page input::placeholder,
+  .profile-page textarea::placeholder {
+    font-size: 11px;
   }
 }
